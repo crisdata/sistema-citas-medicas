@@ -52,6 +52,7 @@ class ReservaCitaIn(BaseModel):
             }
         }
     }
+    
 
 
 class RegistrarYReservarIn(BaseModel):
