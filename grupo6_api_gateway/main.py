@@ -47,8 +47,8 @@ class ReservaCitaIn(BaseModel):
         "json_schema_extra": {
             "example": {
                 "paciente_id": 1,
-                "fecha":       "2026-03-20",
-                "estado":      "Consulta general",
+                "fecha":       "2026-03-20" " " "02:02:30",
+                "estado":      "asignada",
             }
         }
     }
