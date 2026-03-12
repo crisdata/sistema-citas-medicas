@@ -25,7 +25,7 @@ curl -X POST http://192.168.1.57:8001/pacientes \
 ```json
 {"mensaje": "Paciente registrado"}
 ```
-- **IP del servicio:** (completar el día de la práctica)
+- **IP del servicio:** 192.168.1.57
 
 ---
 
@@ -42,7 +42,7 @@ curl http://192.168.1.57:8002/pacientes/1
 ```json
 {"id": 1, "nombre": "Ana García", "email": "ana@correo.com"}
 ```
-- **IP del servicio:** (completar el día de la práctica)
+- **IP del servicio:** 192.168.1.57
 
 ---
 
@@ -62,7 +62,7 @@ curl -X POST http://192.168.1.57:8003/citas \
 ```json
 {"mensaje": "Cita creada"}
 ```
-- **IP del servicio:** (completar el día de la práctica)
+- **IP del servicio:** 192.168.1.57
 
 ---
 
@@ -81,7 +81,7 @@ curl http://192.168.1.57:8004/citas/1
   {"id": 1, "paciente_id": 1, "fecha": "2026-06-15 10:00:00", "estado": "activa"}
 ]
 ```
-- **IP del servicio:** (completar el día de la práctica)
+- **IP del servicio:** 192.168.1.57
 
 ---
 
@@ -98,7 +98,7 @@ curl -X DELETE http://192.168.1.57:8005/citas/1
 ```json
 {"mensaje": "Cita cancelada"}
 ```
-- **IP del servicio:** (completar el día de la práctica)
+- **IP del servicio:** 192.168.1.57
 
 ---
 
@@ -118,7 +118,7 @@ curl -X POST http://192.168.1.57:8000/reservar-cita \
 ```json
 {"mensaje": "Cita creada"}
 ```
-- **IP del servicio:** (completar el día de la práctica)
+- **IP del servicio:** 192.168.1.57
 
 ---
 
