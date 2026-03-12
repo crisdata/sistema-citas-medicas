@@ -1,8 +1,5 @@
 # Sistema Distribuido de Citas Médicas
 
-## Sistemas Distribuidos — COTECNOVA
-**Docente:** Jhon James Cano Sánchez
-
 ---
 
 ## Descripción general
