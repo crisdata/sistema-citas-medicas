@@ -17,7 +17,7 @@ Sistema distribuido compuesto por 6 microservicios independientes que se comunic
 - **Parámetros:** nombre (string), email (string)
 - **Ejemplo request:**
 ```bash
-curl -X POST http://192.168.1.57:8001/pacientes \
+curl -X POST http://172.29.212.254:8001/pacientes \
   -H "Content-Type: application/json" \
   -d '{"nombre": "Ana García", "email": "ana@correo.com"}'
 ```
@@ -25,7 +25,7 @@ curl -X POST http://192.168.1.57:8001/pacientes \
 ```json
 {"mensaje": "Paciente registrado"}
 ```
-- **IP del servicio:** 192.168.1.57
+- **IP del servicio:** 172.29.212.254
 
 ---
 
@@ -36,13 +36,13 @@ curl -X POST http://192.168.1.57:8001/pacientes \
 - **Parámetros:** id (int) — se envía en la URL
 - **Ejemplo request:**
 ```bash
-curl http://192.168.1.57:8002/pacientes/1
+curl http://172.29.212.254:8002/pacientes/1
 ```
 - **Ejemplo response:**
 ```json
 {"id": 1, "nombre": "Ana García", "email": "ana@correo.com"}
 ```
-- **IP del servicio:** 192.168.1.57
+- **IP del servicio:** 172.29.212.254
 
 ---
 
@@ -54,7 +54,7 @@ curl http://192.168.1.57:8002/pacientes/1
 - **Depende de:** Grupo 2 (consulta si el paciente existe antes de crear la cita)
 - **Ejemplo request:**
 ```bash
-curl -X POST http://192.168.1.57:8003/citas \
+curl -X POST http://172.29.212.254:8003/citas \
   -H "Content-Type: application/json" \
   -d '{"paciente_id": 1, "fecha": "2026-06-15 10:00:00"}'
 ```
@@ -62,7 +62,7 @@ curl -X POST http://192.168.1.57:8003/citas \
 ```json
 {"mensaje": "Cita creada"}
 ```
-- **IP del servicio:** 192.168.1.57
+- **IP del servicio:** 172.29.212.254
 
 ---
 
@@ -73,7 +73,7 @@ curl -X POST http://192.168.1.57:8003/citas \
 - **Parámetros:** paciente_id (int) — se envía en la URL
 - **Ejemplo request:**
 ```bash
-curl http://192.168.1.57:8004/citas/1
+curl http://172.29.212.254:8004/citas/1
 ```
 - **Ejemplo response:**
 ```json
@@ -81,7 +81,7 @@ curl http://192.168.1.57:8004/citas/1
   {"id": 1, "paciente_id": 1, "fecha": "2026-06-15 10:00:00", "estado": "activa"}
 ]
 ```
-- **IP del servicio:** 192.168.1.57
+- **IP del servicio:** 172.29.212.254
 
 ---
 
@@ -92,13 +92,13 @@ curl http://192.168.1.57:8004/citas/1
 - **Parámetros:** id (int) — se envía en la URL
 - **Ejemplo request:**
 ```bash
-curl -X DELETE http://192.168.1.57:8005/citas/1
+curl -X DELETE http://172.29.212.254:8005/citas/1
 ```
 - **Ejemplo response:**
 ```json
 {"mensaje": "Cita cancelada"}
 ```
-- **IP del servicio:** 192.168.1.57
+- **IP del servicio:** 172.29.212.254
 
 ---
 
@@ -110,7 +110,7 @@ curl -X DELETE http://192.168.1.57:8005/citas/1
 - **Depende de:** Grupo 2 (consultar paciente) y Grupo 3 (crear cita)
 - **Ejemplo request:**
 ```bash
-curl -X POST http://192.168.1.57:8000/reservar-cita \
+curl -X POST http://172.29.212.254:8000/reservar-cita \
   -H "Content-Type: application/json" \
   -d '{"paciente_id": 1, "fecha": "2026-06-20 09:00:00"}'
 ```
@@ -118,7 +118,7 @@ curl -X POST http://192.168.1.57:8000/reservar-cita \
 ```json
 {"mensaje": "Cita creada"}
 ```
-- **IP del servicio:** 192.168.1.57
+- **IP del servicio:** 172.29.212.254
 
 ---
 
